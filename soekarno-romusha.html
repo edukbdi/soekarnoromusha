@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soekarno dan Romusha: Kolaborasi, Propaganda, dan Beban Sejarah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --bg: #0c0b09;
+      --bg-secondary: #161410;
+      --bg-card: #1c1a16;
+      --text-primary: #f0ece3;
+      --text-secondary: #a8a09a;
+      --text-muted: #6b6460;
+      --accent: #c8843a;
+      --accent-light: #e8a85c;
+      --accent-dim: rgba(200, 132, 58, 0.13);
+      --border: rgba(255,255,255,0.07);
+      --shadow: 0 4px 24px rgba(0,0,0,0.5);
+      --font-display: 'Lora', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --paper-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    html.light {
+      --bg: #f5f0e8;
+      --bg-secondary: #ede5d8;
+      --bg-card: #faf6ee;
+      --text-primary: #1a1208;
+      --text-secondary: #5a4a38;
+      --text-muted: #9a8878;
+      --accent: #a0621a;
+      --accent-light: #c07830;
+      --accent-dim: rgba(160, 98, 26, 0.1);
+      --border: rgba(0,0,0,0.09);
+      --shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        var(--paper-noise),
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(200,132,58,0.04) 0%, transparent 70%);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html.light body {
+      background-image:
+        var(--paper-noise),
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(160,98,26,0.06) 0%, transparent 70%);
+    }
+
+    /* ===== ARTICLE LAYOUT ===== */
+    .article-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .article-hero {
+      margin-bottom: 40px;
+    }
+
+    .article-category {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 5vw, 42px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .article-lead {
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: var(--text-secondary);
+      font-style: italic;
+      font-family: var(--font-display);
+      line-height: 1.65;
+      border-left: 3px solid var(--accent);
+      padding-left: 18px;
+      margin-bottom: 24px;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: center;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ===== VIRAL CALLOUT ===== */
+    .viral-callout {
+      background: var(--accent-dim);
+      border: 1px solid rgba(200,132,58,0.3);
+      border-radius: 8px;
+      padding: 20px 22px;
+      margin-bottom: 36px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .viral-callout .icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .viral-callout p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .viral-callout strong {
+      color: var(--accent-light);
+    }
+
+    /* ===== ARTICLE BODY ===== */
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 40px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: clamp(16px, 2.5vw, 19px);
+      font-weight: 600;
+      color: var(--accent-light);
+      margin: 28px 0 10px;
+    }
+
+    .article-body p {
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      font-size: clamp(14.5px, 2vw, 16.5px);
+      line-height: 1.8;
+    }
+
+    .article-body strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ===== PULL QUOTE ===== */
+    blockquote.pullquote {
+      margin: 36px 0;
+      padding: 28px 28px 28px 32px;
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      box-shadow: var(--shadow);
+    }
+
+    blockquote.pullquote p {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(16px, 2.5vw, 19px);
+      color: var(--text-primary);
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+
+    blockquote.pullquote cite {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      display: block;
+    }
+
+    /* ===== CONTEXT CARD ===== */
+    .context-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin: 32px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .context-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .context-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .context-card ul li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      line-height: 1.6;
+    }
+
+    .context-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .context-card ul li::before {
+      content: '▸';
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      margin: 36px 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .timeline-item {
+      padding: 0 0 28px 52px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .timeline-year {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .timeline-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .timeline-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ===== DISCLAIMER KESIMPULAN ===== */
+    .conclusion-box {
+      background: linear-gradient(135deg, var(--accent-dim), transparent);
+      border: 1px solid rgba(200,132,58,0.25);
+      border-radius: 10px;
+      padding: 28px;
+      margin: 40px 0;
+    }
+
+    .conclusion-box h3 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .conclusion-box p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .conclusion-box p:last-child { margin-bottom: 0; }
+
+    /* ===== REFERENSI ===== */
+    .references {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .references h3 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .references ol {
+      padding-left: 20px;
+    }
+
+    .references ol li {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .references ol li a {
+      color: var(--accent-light);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .references ol li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      margin: 32px 0;
+      border: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .article-wrapper {
+        padding: 32px 16px 60px;
+      }
+
+      blockquote.pullquote {
+        padding: 20px 18px 20px 22px;
+      }
+
+      .context-card {
+        padding: 18px 16px;
+      }
+
+      .timeline::before {
+        left: 14px;
+      }
+
+      .timeline-item {
+        padding-left: 42px;
+      }
+
+      .timeline-item::before {
+        left: 6px;
+        width: 14px;
+        height: 14px;
+      }
+
+      .ornament-divider svg { width: 260px; }
+      .hero-stamp { width: 80px; height: 80px; font-size: 8px; top: 12px; right: 12px; }
+    }
+
+    /* ===== ORNAMENTAL DIVIDERS ===== */
+    .ornament-divider {
+      text-align: center;
+      margin: 36px 0;
+      color: var(--accent);
+      opacity: 0.5;
+      line-height: 0;
+    }
+    html.light .ornament-divider { opacity: 0.4; }
+
+    /* ===== DROP CAP — hanya paragraf pertama di dalam article-body ===== */
+    .article-body > p:first-of-type::first-letter {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 4.2em;
+      font-weight: 700;
+      line-height: 0.78;
+      color: var(--accent);
+      margin: 4px 10px 0 0;
+      padding: 0 6px 0 0;
+      border-right: 2px solid var(--accent);
+    }
+
+    /* ===== HERO STAMP ===== */
+    .hero-stamp-wrap {
+      position: relative;
+    }
+
+    .hero-stamp {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      width: 92px;
+      height: 92px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      opacity: 0.55;
+      font-family: var(--font-display);
+    }
+
+    .hero-stamp .stamp-year {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stamp .stamp-label {
+      font-size: 8px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 3px;
+      line-height: 1.3;
+    }
+
+    /* ===== CORNER ORNAMENT ON CARDS ===== */
+    .context-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .context-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 40px;
+      border-top: 2px solid var(--accent);
+      border-left: 2px solid var(--accent);
+      opacity: 0.4;
+    }
+
+    .context-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 40px; height: 40px;
+      border-bottom: 2px solid var(--accent);
+      border-right: 2px solid var(--accent);
+      opacity: 0.4;
+    }
+
+    /* ===== PULLQUOTE DECORATIVE MARK ===== */
+    blockquote.pullquote {
+      position: relative;
+    }
+
+    blockquote.pullquote::before {
+      content: '\275D';
+      font-family: Georgia, serif;
+      font-size: 72px;
+      color: var(--accent);
+      opacity: 0.12;
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* ===== AGED BORDER ARTICLE WRAPPER ===== */
+    .article-wrapper {
+      position: relative;
+    }
+
+    .article-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -2px;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--accent) 15%,
+        var(--accent) 85%,
+        transparent 100%
+      );
+      opacity: 0.18;
+    }
+
+    /* ===== WATERMARK BACKGROUND TEXT ===== */
+    .section-watermark {
+      position: relative;
+    }
+
+    .section-watermark::after {
+      content: attr(data-wm);
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: center;
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0.12;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    /* ===== STEMPEL DOKUMEN di conclusion box ===== */
+    .conclusion-box {
+      position: relative;
+    }
+
+    .doc-stamp {
+      position: absolute;
+      bottom: 18px;
+      right: 20px;
+      width: 68px;
+      height: 68px;
+      border: 2.5px solid var(--accent);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0.2;
+      transform: rotate(-8deg);
+      padding: 6px;
+    }
+
+    .doc-stamp span {
+      font-family: var(--font-display);
+      font-size: 7px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      line-height: 1.4;
+    }
+
+    .doc-stamp strong {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent) !important;
+      display: block;
+    }
+
+    /* ===== HERO DECORATIVE LINE ===== */
+    .hero-deco-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero-deco-line::before,
+    .hero-deco-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+      opacity: 0.4;
+    }
+
+    .hero-deco-line span {
+      font-size: 16px;
+      color: var(--accent);
+      opacity: 0.6;
+    }
+
+    /* ===== H2 ORNAMENT ===== */
+    .article-body h2::before {
+      content: '⸻ ';
+      color: var(--accent);
+      opacity: 0.5;
+      font-size: 0.8em;
+    }
+
+    /* ===== STRATEGY GRID ===== */
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 28px 0 32px;
+    }
+
+    @media (max-width: 640px) {
+      .strategy-grid { grid-template-columns: 1fr; }
+    }
+
+    .strategy-card {
+      border-radius: 8px;
+      padding: 18px 16px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .strategy-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .strategy-card.kooperatif::before  { background: #c8843a; }
+    .strategy-card.bawah-tanah::before { background: #5a8fc8; }
+    .strategy-card.samar::before       { background: #7a9c6a; }
+
+    .strategy-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .strategy-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .strategy-names {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-light);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .strategy-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="article-wrapper">
+
+    <div class="article-hero hero-stamp-wrap">
+      <div class="hero-stamp" aria-hidden="true">
+        <span class="stamp-year">1942</span>
+        <span class="stamp-label">Pendudukan Jepang</span>
+      </div>
+      <span class="article-category">Sejarah Indonesia</span>
+      <h1 class="article-title">Soekarno dan Romusha: Antara Propaganda, Pilihan Pahit, dan Beban Sejarah</h1>
+      <p class="article-lead">
+        Foto seorang pria bercelana pendek, bertopi jerami, memegang sekop di tengah barisan pekerja itu nyata adanya — bukan manipulasi. Tapi makna di baliknya jauh lebih kompleks dari sekadar "mandor" yang viral di TikTok.
+      </p>
+      <div class="article-meta">
+        <span>📅 April 2026</span>
+        <span>✍️ Tim Redaksi KBDI</span>
+        <span>📚 Kajian Sejarah</span>
+      </div>
+      <div class="hero-deco-line" aria-hidden="true"><span>✦</span></div>
+    </div>
+
+    <div class="viral-callout">
+      <div class="icon">📱</div>
+      <p>
+        <strong>Narasi viral di media sosial</strong> — terutama TikTok — menyebut Soekarno sebagai "mandor romusha" yang mengirim rakyat Indonesia ke kerja paksa. Foto dan klip dari film propaganda Jepang tahun 1944 terus beredar. Faktanya memang ada, tapi konteksnya sangat penting untuk dipahami.
+      </p>
+    </div>
+
+    <div class="article-body">
+
+      <h2>Latar Belakang: Jepang Datang, Belanda Pergi</h2>
+
+      <p>
+        Ketika Jepang menggeser kekuasaan Hindia Belanda pada <strong>Maret 1942</strong>, suasana awalnya disambut dengan harapan besar. Selama lebih dari tiga abad rakyat Indonesia hidup di bawah kolonialisme Belanda — maka wajar bila kedatangan kekuatan baru yang mengklaim diri sebagai "saudara Asia" terasa seperti angin segar. Jepang bahkan membangun propaganda <em>Gerakan Tiga A</em>: Jepang Pemimpin Asia, Jepang Pelindung Asia, Jepang Cahaya Asia. Ramalan Jayabaya tentang "Ratu Adil" pun dipercaya banyak orang sebagai wujud datangnya Jepang.
+      </p>
+
+      <p>
+        Soekarno sendiri saat itu sedang dalam pengasingan di Bengkulu. <strong>Jepang menemukannya</strong> dan melihat potensi besar: seorang orator ulung yang anti-Belanda, yang bisa dimanfaatkan untuk menggalang massa. Inilah awal dari hubungan yang penuh kalkulasi di kedua sisi.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>"Bagiku, dengan memberikan kepada Jepang sesuatu yang mereka perlukan, sebagai imbalannya aku dapat menuntut lebih banyak konsesi yang kuperlukan, yaitu cara yang positif menuju kemerdekaan."</p>
+        <cite>— Soekarno, dalam autobiografi <em>Bung Karno: Penyambung Lidah Rakyat Indonesia</em> (Cindy Adams, 1965)</cite>
+      </blockquote>
+
+      <div class="ornament-divider" aria-hidden="true">
+        <svg width="320" height="28" viewBox="0 0 320 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--accent)">
+          <line x1="0" y1="14" x2="128" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+          <path d="M136 14 L142 8 L148 14 L154 8 L160 14 L166 8 L172 14 L178 8 L184 14" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="160" cy="14" r="4" fill="currentColor" opacity="0.6"/>
+          <line x1="192" y1="14" x2="320" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+
+      <h2>Romusha: Dari "Pahlawan Kerja" Menjadi Tragedi</h2>
+
+      <p>
+        Pada <strong>3 Oktober 1943</strong>, Jepang secara resmi mengorganisasi program <em>Romusha</em> — yang dalam bahasa propagandanya berarti "prajurit pekerja" atau "pahlawan kerja." Rekrutmen dilakukan melalui hierarki dari level keresidenan hingga desa, memanfaatkan struktur pemerintahan lokal yang sudah ada.
+      </p>
+
+      <div class="context-card">
+        <h4>Fakta-Fakta Romusha</h4>
+        <ul>
+          <li>Perpustakaan Kongres Amerika Serikat memperkirakan 4–10 juta orang dari Jawa saja dikerahkan sebagai romusha selama pendudukan Jepang</li>
+          <li>Para pekerja dijanjikan upah layak, makanan, dan tempat tinggal — kenyataannya jauh berbeda</li>
+          <li>Pembangunan jalur kereta api di Bayah, Lebak, diduga menelan korban jiwa hingga 90.000 orang</li>
+          <li>Banyak romusha dikirim ke luar Indonesia — Burma, Thailand, Malaysia — dan hanya sedikit yang pulang</li>
+          <li>Di beberapa daerah yang kehabisan tenaga pria, perempuan pun dipaksa ikut bekerja</li>
+        </ul>
+      </div>
+
+      <p>
+        Perekrutan tidak selalu dilakukan secara paksa pada awalnya. Propaganda Jepang cukup efektif: janji kesejahteraan, semangat Asia Timur Raya, dan legitimasi dari tokoh-tokoh nasional yang dikenal rakyat membuat sebagian mendaftar secara sukarela — hanya untuk mendapati kondisi yang jauh dari apa yang dijanjikan.
+      </p>
+
+      <div class="ornament-divider" aria-hidden="true">
+        <svg width="320" height="28" viewBox="0 0 320 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--accent)">
+          <line x1="0" y1="14" x2="118" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+          <rect x="143" y="8" width="12" height="12" stroke="currentColor" stroke-width="1" transform="rotate(45 149 14)"/>
+          <rect x="151" y="9" width="10" height="10" stroke="currentColor" stroke-width="0.5" opacity="0.4" transform="rotate(45 156 14)"/>
+          <circle cx="160" cy="14" r="3" fill="currentColor" opacity="0.8"/>
+          <rect x="168" y="8" width="12" height="12" stroke="currentColor" stroke-width="1" transform="rotate(45 174 14)"/>
+          <rect x="176" y="9" width="10" height="10" stroke="currentColor" stroke-width="0.5" opacity="0.4" transform="rotate(45 181 14)"/>
+          <line x1="202" y1="14" x2="320" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+
+      <h2>Peran Soekarno: Wajah Propaganda</h2>
+
+      <p>
+        Jepang membutuhkan wajah yang dipercaya rakyat. Maka mereka menempatkan Soekarno bersama Hatta, Ki Hajar Dewantara, dan K.H. Mas Mansur — dikenal sebagai <strong>"Empat Serangkai"</strong> — di garis depan berbagai organisasi massa seperti PUTERA (Pusat Tenaga Rakyat) dan kemudian Jawa Hokokai.
+      </p>
+
+      <p>
+        Keterlibatan Soekarno dalam propaganda romusha bukan sekadar rumor. Ia tampil dalam <strong>film propaganda Jepang tahun 1944</strong> berjudul <em>Nampo-Hodo</em>, mengenakan celana pendek dan topi jerami, berdiri di tengah para pekerja. Foto itulah yang kini viral di media sosial. Ia juga menyampaikan pidato-pidato yang mendorong rakyat bergabung dalam program tersebut, dan namanya tertera dalam berbagai publikasi resmi Jepang.
+      </p>
+
+      <blockquote class="pullquote">
+        <p>"Tiap batu yang diangkat menjadi peluru bagi musuh, tiap keringat yang diteteskan menjadi bisa bagi musuh."</p>
+        <cite>— Soekarno dalam pidato propaganda romusha, dikutip dalam <em>Djawa Baroe</em>, 15 Oktober 1944</cite>
+      </blockquote>
+
+      <div class="ornament-divider" aria-hidden="true">
+        <svg width="320" height="28" viewBox="0 0 320 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--accent)">
+          <line x1="0" y1="14" x2="130" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 4"/>
+          <path d="M142 14 C142 9, 148 9, 148 14 C148 19, 154 19, 154 14 C154 9, 160 9, 160 14 C160 19, 166 19, 166 14 C166 9, 172 9, 172 14 C172 19, 178 19, 178 14" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="190" y1="14" x2="320" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 4"/>
+        </svg>
+      </div>
+
+      <h2>Kesadaran Soekarno dan Beban yang Ia Pikul</h2>
+
+      <p>
+        Yang membuat kisah ini tidak sederhana adalah fakta bahwa Soekarno <strong>tidak pernah menyangkal</strong> keterlibatannya. Ketika wartawan Amerika Cindy Adams mewawancarainya untuk penulisan autobiografi, ia memberikan pengakuan yang langka dan pahit:
+      </p>
+
+      <blockquote class="pullquote">
+        <p>"Sesungguhnya akulah, Soekarno, yang mengirim mereka kerja paksa. Ya. Akulah orangnya. Aku menyuruh mereka berlayar menuju kematian."</p>
+        <cite>— Soekarno, dalam <em>Bung Karno: Penyambung Lidah Rakyat Indonesia</em> (Adams, 1965/2019, hlm. 232)</cite>
+      </blockquote>
+
+      <p>
+        Pengakuan itu dilengkapi dengan gambaran penyesalan yang mendalam setelah ia meninjau langsung kondisi para pekerja paksa di Banten: orang-orang yang tinggal tulang dibalut kulit, tanda-tanda kelaparan dan penyiksaan yang nyata. Soekarno menyebut mereka tampak seperti "tengkorak hidup."
+      </p>
+
+      <p>
+        Lantas mengapa ia tetap melanjutkan peran propagandanya? Sejarawan John David Legge dalam <em>Sukarno: A Political Biography</em> (1973) menilai pilihan ini harus dibaca dalam konteks keterbatasan geopolitik saat itu. <strong>Indonesia belum memiliki kekuatan militer untuk melawan Jepang secara langsung.</strong> Soekarno percaya — atau memilih untuk percaya — bahwa dengan memberi Jepang apa yang mereka minta, ia bisa menuntut imbalan: kemerdekaan Indonesia.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1942</div>
+          <div class="timeline-title">Jepang Masuk, Soekarno Bertemu Kapten Sakaguchi</div>
+          <div class="timeline-text">Jepang menemukan Soekarno di Padang saat Belanda kabur. Departemen Propaganda Jepang (<em>Sendenbu</em>) segera menyadari nilainya sebagai tokoh nasionalis anti-Belanda.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1942–1943</div>
+          <div class="timeline-title">PUTERA dan Organisasi Massa</div>
+          <div class="timeline-text">Soekarno, Hatta, Ki Hajar, dan K.H. Mas Mansur memimpin PUTERA — yang dimanfaatkan Jepang untuk mobilisasi massa dan propaganda perang, namun juga digunakan para tokoh untuk menanam semangat nasionalisme secara terselubung.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Oktober 1943</div>
+          <div class="timeline-title">Romusha Resmi Diorganisasi</div>
+          <div class="timeline-text">Chuo Sangi-In bersidang dan menyepakati pengerahan tenaga kerja untuk keperluan perang. Soekarno aktif dalam kampanye perekrutan romusha di berbagai daerah Jawa.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1944</div>
+          <div class="timeline-title">Film Propaganda dan Foto Viral</div>
+          <div class="timeline-text">Soekarno tampil dalam film propaganda Jepang bersama pekerja romusha. Foto inilah yang kemudian viral di media sosial hampir delapan dekade kemudian.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1945</div>
+          <div class="timeline-title">Proklamasi Kemerdekaan</div>
+          <div class="timeline-text">Jepang kalah dari Sekutu. Soekarno dan Hatta memproklamasikan kemerdekaan Indonesia pada 17 Agustus 1945 — buah dari perjuangan yang ditempuh melalui jalan berliku, termasuk kolaborasi yang penuh kontradiksi.</div>
+        </div>
+      </div>
+
+      <div class="ornament-divider" aria-hidden="true">
+        <svg width="320" height="36" viewBox="0 0 320 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--accent)">
+          <line x1="0" y1="18" x2="108" y2="18" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+          <path d="M116 18 L122 12 L128 18" stroke="currentColor" stroke-width="1" fill="none"/>
+          <path d="M128 18 L134 12 L140 18" stroke="currentColor" stroke-width="1" fill="none"/>
+          <circle cx="152" cy="18" r="6" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="152" cy="18" r="2.5" fill="currentColor" opacity="0.7"/>
+          <path d="M164 18 L170 12 L176 18" stroke="currentColor" stroke-width="1" fill="none"/>
+          <path d="M176 18 L182 12 L188 18" stroke="currentColor" stroke-width="1" fill="none"/>
+          <line x1="196" y1="18" x2="320" y2="18" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+
+      <h2>Kolaborator atau Pejuang? Membaca Sejarah Secara Utuh</h2>
+
+      <p>
+        Narasi "Soekarno mandor romusha" yang viral di TikTok tidak sepenuhnya salah — tetapi sangat tidak lengkap. Ia mengambil satu gambar, satu fakta, lalu melepaskannya dari seluruh konteks yang membentuknya. Hasilnya adalah distorsi, bukan sejarah.
+      </p>
+
+      <p>
+        Di sisi lain, membela Soekarno secara membabi buta dengan mengabaikan penderitaan ratusan ribu romusha juga bukan sikap yang tepat. Pengakuan Soekarno sendiri tidak memberikan ruang untuk itu — ia mengakui keterlibatannya, meski dalam keterbatasan pilihan yang ada.
+      </p>
+
+      <p>
+        Yang perlu kita tanyakan bukan hanya <em>"apakah Soekarno terlibat?"</em> — jawabannya jelas: <strong>iya</strong>. Pertanyaan yang lebih penting adalah: <em>dalam kondisi apa ia membuat pilihan itu, apa alternatifnya, dan apa dampak jangka panjangnya bagi kemerdekaan Indonesia?</em>
+      </p>
+
+      <div class="conclusion-box">
+        <h3>🔍 Membaca Sejarah Dengan Jujur</h3>
+        <p>
+          Soekarno terlibat dalam propaganda romusha — ini fakta yang ia sendiri akui. Keterlibatannya adalah bagian dari strategi kolaborasi dengan Jepang yang bertujuan mencapai kemerdekaan Indonesia, dalam konteks di mana perlawanan bersenjata langsung dinilai belum memungkinkan.
+        </p>
+        <p>
+          Ini bukan berarti penderitaan ratusan ribu romusha bisa diabaikan. Ini berarti kita perlu memahami bahwa sejarah jarang hitam-putih: tokoh yang sama bisa sekaligus menjadi bagian dari sistem yang menindas, dan pejuang yang mengorbankan segalanya untuk kemerdekaan bangsanya.
+        </p>
+        <p>
+          Soekarno sendiri merangkumnya dengan singkat: <em>"Tidak jadi soal kalau ada yang menyebutku kolaborator, karena aku tidak perlu membuktikan kepada mereka atau kepada dunia apa yang telah kulakukan. Sejarahlah yang akan membersihkan namaku."</em>
+        </p>
+        <!-- Stempel dokumen arsip -->
+        <div class="doc-stamp" aria-hidden="true">
+          <span>Arsip</span>
+          <strong>1942</strong>
+          <span>–1945</span>
+        </div>
+      </div>
+
+      <!-- SEKSI BARU: Tiga Jalur Perjuangan -->
+      <div class="ornament-divider" aria-hidden="true">
+        <svg width="320" height="28" viewBox="0 0 320 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--accent)">
+          <line x1="0" y1="14" x2="128" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+          <path d="M136 14 L142 8 L148 14 L154 8 L160 14 L166 8 L172 14 L178 8 L184 14" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="160" cy="14" r="4" fill="currentColor" opacity="0.6"/>
+          <line x1="192" y1="14" x2="320" y2="14" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+
+      <h2>Bukan Hanya Soekarno: Tiga Jalur Perjuangan Melawan Jepang</h2>
+
+      <p>Ada satu pertanyaan yang jarang dimunculkan dalam narasi viral soal romusha: <em>jika Soekarno bersalah karena berkolaborasi, bagaimana dengan tokoh-tokoh lain yang juga ada di dalam sistem Jepang?</em> Jawabannya membuka dimensi yang jauh lebih kompleks dari sekadar kisah seorang "mandor."</p>
+
+      <p>Para pemimpin nasionalis Indonesia tidak bulat-bulat memilih satu sikap. Mereka terpecah ke dalam setidaknya <strong>tiga jalur perjuangan</strong> yang berbeda — masing-masing dengan kalkulasi, risiko, dan konsekuensinya sendiri.</p>
+
+      <h3>Jalur Pertama: Kooperatif Terbuka</h3>
+
+      <p>Soekarno, Hatta, Ki Hajar Dewantara, dan K.H. Mas Mansur — <strong>Empat Serangkai</strong> — memilih masuk ke dalam sistem. Mereka memimpin PUTERA dan kemudian Jawa Hokokai, dua organisasi massa bentukan Jepang. Bagi Jepang, keempat tokoh ini adalah alat mobilisasi rakyat. Bagi para tokoh itu sendiri, posisi tersebut adalah celah: menanam nasionalisme di dalam struktur yang seharusnya memadamkannya.</p>
+
+      <p>Hatta sendiri punya kalkulasi yang lebih hati-hati dari Soekarno. Ia tidak tampil sebagai "wajah" propaganda romusha, dan dalam memoarnya ia menekankan bahwa kolaborasi adalah cara untuk menyusun kekuatan rakyat sembari menunggu Jepang kalah. Kendati demikian, ia tetap berada di dalam sistem yang sama dan dicap kolaborator oleh kelompok non-kooperatif.</p>
+
+      <div class="strategy-grid">
+        <div class="strategy-card kooperatif">
+          <div class="strategy-label">Jalur I</div>
+          <div class="strategy-title">Kooperatif Terbuka</div>
+          <div class="strategy-names">Soekarno · Hatta · Ki Hajar · K.H. Mas Mansur</div>
+          <div class="strategy-desc">Masuk ke dalam sistem Jepang. Pimpin organisasi massa. Tanam nasionalisme dari dalam. Risiko: dicap kolaborator.</div>
+        </div>
+        <div class="strategy-card bawah-tanah">
+          <div class="strategy-label">Jalur II</div>
+          <div class="strategy-title">Non-Kooperatif / Bawah Tanah</div>
+          <div class="strategy-names">Sjahrir · Amir Syarifuddin · Sukarni</div>
+          <div class="strategy-desc">Tolak sistem Jepang. Bangun jaringan rahasia. Pantau siaran Sekutu. Risiko: ditangkap, disiksa, atau dihukum mati.</div>
+        </div>
+        <div class="strategy-card samar">
+          <div class="strategy-label">Jalur III</div>
+          <div class="strategy-title">Posisi Samar / Menyamar</div>
+          <div class="strategy-names">Tan Malaka</div>
+          <div class="strategy-desc">Menyamar dengan identitas palsu. Bekerja di lingkungan Jepang tanpa menjadi propagandis. Tetap bergerak di balik layar.</div>
+        </div>
+      </div>
+
+      <h3>Jalur Kedua: Non-Kooperatif dan Gerakan Bawah Tanah</h3>
+
+      <p>Sutan Sjahrir adalah figur paling menonjol di jalur ini. Ia menolak bekerja sama dengan Jepang sejak awal — bukan hanya karena nilai sosial-demokratnya yang berbenturan dengan fasisme, tetapi juga karena keyakinan analitisnya bahwa Jepang pasti kalah. Dengan memantau siaran radio Sekutu secara diam-diam dan membangun jaringan mahasiswa dan pemuda, Sjahrir memastikan ada kelompok yang tidak akan "kotor" oleh label kolaborator — dan yang bisa bernegosiasi dengan Sekutu setelah perang usai.</p>
+
+      <p>Amir Syarifuddin mengambil langkah lebih jauh: ia menerima dana dari pemerintah kolonial Belanda untuk membangun gerakan bawah tanah anti-Jepang. Ia nyaris tertangkap dan dieksekusi, dan hanya lolos berkat intervensi Soekarno dan Hatta yang masih memiliki pengaruh di dalam sistem Jepang — sebuah ironi yang menunjukkan bahwa dua jalur itu, kooperatif dan non-kooperatif, justru saling menopang.</p>
+
+      <h3>Jalur Ketiga: Menyamar di Balik Sistem</h3>
+
+      <p>Tan Malaka mengambil jalan yang paling unik. Ia tidak tampil di podium propaganda Jepang, tetapi juga tidak memimpin gerakan bawah tanah yang terorganisir. Ia menyamar dengan nama <em>Ilyas Husein</em>, bekerja di Bayah, Banten — ironisnya di bagian administrasi romusha milik perusahaan Jepang Sumitomo — sembari diam-diam tetap berhubungan dengan jaringan pemuda revolusioner menjelang proklamasi.</p>
+
+      <h3>Mengapa Soekarno yang Paling Viral?</h3>
+
+      <p>Dari semua tokoh di atas, Soekarno adalah satu-satunya yang meninggalkan <strong>jejak visual yang kuat</strong>: foto dan film propaganda yang tersebar luas, pidato yang dikutip di koran, nama yang tercetak di poster perekrutan. Hatta ada di sistem yang sama, tetapi tidak meninggalkan "gambar yang bisa dibagikan." Ini bukan soal siapa yang lebih bersalah — ini soal siapa yang lebih <em>terlihat</em>.</p>
+
+      <p>Di sinilah bahaya presentisme dan seleksi bukti dalam sejarah bekerja: narasi viral mengambil bukti visual paling dramatis, mengabaikan konteks kolektifnya, lalu membangun tuduhan individual. Hasilnya adalah sejarah yang terasa kuat secara emosional, tetapi rapuh secara analitis.</p>
+
+      <div class="conclusion-box" style="margin-top:32px;">
+        <h3>⚖️ Kolaborasi sebagai Keputusan Kolektif</h3>
+        <p>Kolaborasi dengan Jepang bukan dosa tunggal Soekarno. Ia adalah keputusan strategis yang diambil bersama oleh golongan nasionalis kooperatif — dengan Hatta, Ki Hajar, dan K.H. Mas Mansur sebagai rekan setaranya. Yang membedakan Soekarno adalah derajat eksposurnya sebagai wajah propaganda, bukan kesendirian moralnya.</p>
+        <p>Di saat yang sama, pilihan Sjahrir, Amir, dan Tan Malaka untuk tidak masuk sistem menunjukkan bahwa kolaborasi bukan satu-satunya jalan yang tersedia. Ada yang menilai risikonya terlalu besar, ada yang memilih jalan sembunyi, ada yang menyamar. Semua jalur itu bertujuan satu: kemerdekaan Indonesia. Bedanya hanya pada cara dan harga yang dibayar — dan siapa yang fotonya kemudian viral di TikTok delapan puluh tahun kemudian.</p>
+        <div class="doc-stamp" aria-hidden="true">
+          <span>Arsip</span>
+          <strong>1942</strong>
+          <span>–1945</span>
+        </div>
+      </div>
+
+    </div><!-- end article-body -->
+
+    <div class="references">
+      <div class="ornament-divider" aria-hidden="true" style="margin-bottom:20px; margin-top:0;">
+        <svg width="280" height="22" viewBox="0 0 280 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--accent)">
+          <line x1="0" y1="11" x2="100" y2="11" stroke="currentColor" stroke-width="0.7" stroke-dasharray="3 3"/>
+          <path d="M108 11 L116 5 L124 11 L132 5 L140 11 L148 5 L156 11 L164 5 L172 11" stroke="currentColor" stroke-width="1" fill="none"/>
+          <line x1="180" y1="11" x2="280" y2="11" stroke="currentColor" stroke-width="0.7" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+      <h3>Sumber &amp; Referensi</h3>
+      <ol>
+        <li>Adams, C. (1965/2019). <em>Bung Karno: Penyambung Lidah Rakyat Indonesia</em>. Jakarta: Yayasan Bung Karno.</li>
+        <li>Hatta, M. <em>Untuk Negeriku</em>. Penerbit Kompas.</li>
+        <li>Friend, T. (2003). <em>Indonesian Destinies</em>. Harvard University Press.</li>
+        <li>Legge, J.D. (1973). <em>Sukarno: A Political Biography</em>. Penguin Books.</li>
+        <li>Ricklefs, M.C. (2005). <em>Sejarah Indonesia Modern 1200–2004</em>. Serambi.</li>
+        <li>Rachmadita, A. (2025). Sukarno, Romusha, dan Pendudukan Jepang di Indonesia. <em>Historia.id</em>. <a href="https://www.historia.id/article/sukarno-romusha-dan-pendudukan-jepang-di-indonesia" target="_blank">historia.id</a></li>
+        <li>Mukhaer, A.A. (2024). Sejarah Indonesia: Kenapa Sukarno Bekerja Sama dengan Jepang demi Kemerdekaan? <em>National Geographic Indonesia</em>. <a href="https://nationalgeographic.grid.id/read/134126518/sejarah-indonesia-kenapa-sukarno-bekerja-sama-dengan-jepang-demi-kemerdekaan" target="_blank">nationalgeographic.grid.id</a></li>
+        <li>Nababan, A.G. (2018). <em>Kebijakan Kerja Paksa Romusha pada Masa Pendudukan Jepang di Indonesia (1942–1945)</em>. Skripsi S1, Universitas Negeri Medan.</li>
+        <li>CNBC Indonesia. (2025). Soekarno Jadi Mandor Romusa & Buat Rakyat RI Tewas? Ini Faktanya. <a href="https://www.cnbcindonesia.com/entrepreneur/20250804132527-25-654837/soekarno-jadi-mandor-romusa-buat-rakyat-ri-tewas-ini-faktanya" target="_blank">cnbcindonesia.com</a></li>
+        <li>Sejarah FKIP UNS. (2025). Narasi yang Disembunyikan: Hubungan Soekarno dengan Pemerintah Jepang 1942–1945. <a href="https://sejarah.fkip.uns.ac.id/2025/05/24/narasi-yang-disembunyikan-hubungan-soekarno-dengan-pemerintah-jepang-tahun-1942-1945/" target="_blank">sejarah.fkip.uns.ac.id</a></li>
+        <li><em>Djawa Baroe</em>, 1 Oktober 1943 dan 15 Oktober 1944 (dokumen historis primer, dikutip dalam berbagai sumber sekunder).</li>
+        <li>Noer, D. (1990). <em>Mohammad Hatta: Biografi Politik</em>. LP3ES. [Dikutip dalam: Kemdikbud MPNP, Strategi Hatta dalam Menangkis Tuduhan Belanda. <a href="https://kebudayaan.kemdikbud.go.id/mpnp/strategi-hatta-dalam-menangkis-tuduhan-belanda-dengan-penunjukan-sjahrir-sebagai-perdana-menteri/" target="_blank">kebudayaan.kemdikbud.go.id</a>]</li>
+        <li>Mrazek, R. (1996). <em>Sjahrir: Politics and Exile in Indonesia</em>. Cornell University Press. [Dikutip dalam Historia.id: <a href="https://www.historia.id/article/sutan-sjahrir-bergerak-di-bawah-tanah-menjelang-kemerdekaan" target="_blank">Sutan Sjahrir Bergerak di Bawah Tanah</a>]</li>
+        <li>Poeze, H. (2008). <em>Tan Malaka, Gerakan Kiri dan Revolusi Indonesia Jilid I</em>. KITLV–Obor. [Dikutip dalam Tirto.id: <a href="https://tirto.id/sepak-terjang-sjahrir-amir-dan-tan-jelang-proklamasi-ri-cpMr" target="_blank">Sepak Terjang Sjahrir, Amir, dan Tan Jelang Proklamasi RI</a>]</li>
+        <li>Anderson, B. (1988). <em>Revoloesi Pemoeda: Pendudukan Jepang dan Perlawanan di Jawa 1944–1946</em>. Pustaka Sinar Harapan. [Dikutip dalam Historia.id terkait gerakan bawah tanah Sjahrir]</li>
+        <li>Kompas.com. (2021). Tokoh-tokoh Perjuangan Kooperatif Masa Pendudukan Jepang. <a href="https://www.kompas.com/stori/read/2021/06/15/180000579/tokoh-tokoh-perjuangan-kooperatif-masa-pendudukan-jepang" target="_blank">kompas.com</a></li>
+        <li>Kompas.com. (2021). Tokoh-tokoh Perjuangan Non-Kooperatif Masa Pendudukan Jepang. <a href="https://www.kompas.com/stori/read/2021/06/15/170000579/tokoh-tokoh-perjuangan-non-kooperatif-masa-pendudukan-jepang" target="_blank">kompas.com</a></li>
+      </ol>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  const savedTheme = localStorage.getItem('kbdi-theme');
+  if (savedTheme === 'light') document.documentElement.classList.add('light');
+
+  fetch('https://edukbdi.github.io/header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('afterbegin', html);
+      const header = document.getElementById('kbdi-header');
+      if (savedTheme === 'light') header.classList.add('kbdi-light');
+      document.getElementById('kbdiThemeToggle').addEventListener('click', function() {
+        const isLight = document.documentElement.classList.toggle('light');
+        header.classList.toggle('kbdi-light', isLight);
+        localStorage.setItem('kbdi-theme', isLight ? 'light' : 'dark');
+        const footer = document.getElementById('kbdi-footer');
+        if (footer) footer.classList.toggle('kbdi-light', isLight);
+      });
+    });
+
+  fetch('https://edukbdi.github.io/footer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('beforeend', html);
+      const footer = document.getElementById('kbdi-footer');
+      if (footer && savedTheme === 'light') footer.classList.add('kbdi-light');
+    });
+</script>
+
+</body>
+</html>
